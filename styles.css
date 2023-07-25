@@ -1,0 +1,266 @@
+* {
+    margin: 2px;
+}
+
+#nav > #nav-title > a {
+    font-size: 33px;
+    color: green;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#nav > #nav-title:hover,
+#nav-links > div:hover,
+#nav-links > div > a:hover  {
+    color: gray;
+    letter-spacing: 1px;
+}
+
+#nav {
+    display: flex;
+    justify-content: space-between
+}
+
+#nav:hover {
+    cursor: pointer;
+}
+
+#nav > #nav-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 13px;
+}
+
+#nav-links > div {
+    margin-right: 14px;
+    font-size: 20px;
+}
+
+#nav-links > div > a {
+    text-decoration: none;
+    color: black
+}
+
+#text-animated {
+    margin-top: 130px;
+    text-align: center;
+    font-size: 27px;
+    font-family: cursive;
+}
+
+#intro {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 28px;
+    color: green;
+}
+
+#nav-b {
+    text-align: center;
+    font-size: 24px;
+    margin-top: 50px;
+    display: none; /*yes display for testing*/
+}
+
+#nav-b > #nav-links-b {
+    margin-top: 28px;
+}
+
+#nav-b-createdeck, #nav-b-viewdeck {
+    width: 200px;
+    margin-right: 20px;
+}
+
+#nav-links-b > a:hover {
+    box-shadow: 0 0 5px green, 0 0 25px green, 0 0 50px green;
+}
+
+#footer {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    font-size: 10px;
+}
+
+#footer-content2 {
+    color: green;
+    font-weight:bold;
+}
+
+/*create-deck template*/
+
+#create-deck-body, #create-card-body {
+    text-align: center;
+}
+
+#title-create-deck {
+    margin-bottom: 20px;
+    font-size: 33px;
+}
+
+#create-deck-btn {
+    margin-top: 20px;
+    width: 180px;
+    height: 40px;
+}
+
+#create-deck-btn:hover {
+    box-shadow: 0 0 5px green, 0 0 25px green, 0 0 40px green;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    height: 100px;
+    margin-left: 22%;
+}
+
+.form-group-a > input,
+.form-group-b > textarea {
+    border: none;
+    border-radius: 9px 9px 9px 9px;
+}
+
+#deck-form-container {
+    background-color: lightgray;
+    border-radius: 10px 10px 10px 10px;
+    margin: 50px;
+    padding: 5px;
+}
+
+.form-label {
+    font-size: 18px;
+}
+
+/*view-deck template*/
+
+#view-data-container {
+    text-align: center;
+    margin-right: 23%;
+    margin-left: 23%;
+    margin-top: 60px;
+    background-color: lightgray;
+    border-radius: 10px 10px 10px 10px;
+    height: 230px;
+    padding: 10px;
+    padding-bottom: 0;
+    border: solid 1px green;
+}
+
+.data-field > h5 {
+    color: darkgreen;
+}
+
+.data-field {
+    margin-bottom: 10px;
+}
+
+#message {
+    text-align: center;
+    font-size: 35px;
+    margin-left: 10px;
+}
+
+/*view-decks template*/
+
+#display-decks-container {
+    text-align: center;
+    margin: 10px;
+    margin-top: 23px;
+    width: 45%;
+    margin-left: 28%;
+}
+
+#display-decks-container > a {
+    text-decoration: none;
+    color: black;
+}
+
+#display-deck {
+    background-color: lightgray;
+    margin: 10px;
+    border-radius: 10px 10px 10px 10px;
+    font-size: 16px;
+    height: 70px;
+    padding: 3px;
+    border: solid 1px green;
+    overflow: hidden;
+}
+
+#display-deck:hover {
+    background-color: green;
+    color: white;
+    height: auto /* to allow for div to resize based on contents */
+}
+
+#display-decks-title {
+    text-align: center;
+    font-size: 35px;
+    margin-left: 10px;
+}
+
+#display-name {
+    font-size: 20px;
+    color: green;
+    font-weight: bold;
+}
+
+#display-deck:hover #display-name { /*hence display-name is targeted when display-deck is hovered on*/
+    color: white
+}
+
+#view-deck-body > .controls {
+    margin-top: 20px;
+    margin-left: 35%;
+}
+
+.controls > a > button {
+    width: 170px;
+}
+
+/*view-card template */
+
+#view-card-body > #view-data-container {
+    height: 400px;
+    width: 350px;
+    margin-left: 35.5%;
+}
+/*
+.toggle-hide {
+    display: none;
+}
+*/
+#view-card-body > .controls {
+    margin-top: 10px;
+    margin-left: 35.5%;
+}
+
+/*account-page*/
+#account-container {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 20px;
+}
+
+#curr-account {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#account-container > .label {
+    color: green;
+}
+
+#controls-account {
+    display: flex;
+    flex-direction:column;
+    margin-top: 20px;
+}
+
+#controls-account > a > button {
+    width: 200px;
+}

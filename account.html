@@ -1,0 +1,47 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+</head>
+<body>
+
+    <div id="nav">
+        <div id="nav-title">
+            <a href="{% url 'index' %}">flashify</a>
+        </div>
+    </div>
+
+    <div id="curr-account">
+        Account Details / {{ request.user.username }}
+    </div>
+
+    <div id="account-container">
+
+        <div class="label">
+            Username
+        </div>
+        <div>
+            {{ request.user.username }}
+        </div>
+        <div class="label">
+            Email
+        </div>
+        <div>
+            {{ request.user.email }}
+        </div>
+
+        <div id="controls-account">
+            <a href="{% url 'viewdecks' %}"><button class="btn btn-success">My Decks</button></a>
+            <a href="{% url 'logout' %}"><button class="btn btn-secondary">Logout</button></a>
+        </div>
+
+    </div>
+
+</body>
+</html>

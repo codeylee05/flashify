@@ -1,0 +1,49 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Card: {{ card.id }}</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <script defer src="{% static 'js/scripts.js' %}"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+</head>
+<body id="view-card-body">
+
+    <div id="nav">
+        <div id="nav-title">
+            <a href="{% url 'index' %}">flashify</a>
+        </div>
+        <div id="nav-links">
+            <div><a href="{% url 'index' %}">Home</a></div>
+            <div><a href="{% url 'viewdecks' %}">Decks</a></div>
+            <div><a href="{% url 'create_deck' %}">Create</a></div>
+            <div><a href="{% url 'account' %}">Account</a></div>
+        </div>
+    </div> 
+
+    <div id="message">
+        {{ message }} of {{ card.deck.deck_name }}
+    </div>
+
+    <div id="view-data-container" class="card-toggle">
+        <div class="data-field" id="prompt-data">
+            <h5>Prompt</h5>
+            <h2>{{ card.prompt }}</h2>
+        </div>
+        <div class="data-field" id="response-data">
+            <h5>Response</h5>
+            <h4>{{ card.response }}</h4>
+        </div>
+    </div>
+
+    <div class="controls">
+        <a href="{% url 'delete_card' card.deck.id card.id %}"><button id="delete-card-btn" class="btn btn-outline-danger delete">Delete</button></a>
+        <a href="{% url 'viewcards' deck.id %}"><button id="view_deck_of_card" class="btn btn-success">View Deck</button></a> 
+    </div>
+</body>
+</html>
